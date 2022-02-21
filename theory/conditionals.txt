@@ -1,0 +1,23 @@
+1. prompt로 "How old are you?" 값 입력 창 띄우기
+2. parseInt로 입력 값 숫자로 변환
+3. parseInt로 숫자 변환되지 않는 문자(string) 입력 시 NaN으로 출력
+4. 1~3에 해당하는 변수 age 값을 isNaN으로 NaN인지 Number인지 boolean으로 출력
+5. if (boolean) { } 에 4 넣어 true or false 출력
+6. true(NaN)로 출력 된다면 숫자 기재 요청 문구,
+   false(Number)로 출력 된다면 입력 완료 문구
+
+
+
+
+
+OR operator
+true || true === true
+false || true === true
+true || false === true
+false || false === false
+
+AND operator
+true && true === true
+false && true === false
+true && false === false
+false && false === false

@@ -1,0 +1,14 @@
+1. 호출하고 싶은 element를 지정
+   (const h1 = ...)
+2. event를 넣고 싶은 element에 addEventListener를 호출
+   (h1.addEventListener)
+3. listen하고 싶은 event 이름 입력
+   (h1.addEventListener("click"))
+4. event가 발생하면 호출할 function 입력
+   (h1.addEventListener("click", handleTitleClick))
+   // function 뒤에 ()를 넣지 않는다.
+
+
+click 하면 handleTitleClick function이 동작
+function을 동작시키려면 handleTitleClick()와 같이 메소드를 입력해야 하지만 ()를 쓰지 않음으로서 바로 실행시키지 않고 이 function을 javascript에 넘겨주고 유저가 title을 click할 경우에 javascript가 실행 버튼을 대신 눌러주는 방식
+
