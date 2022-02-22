@@ -12,13 +12,16 @@ function saveToDos() {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   li.remove();
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   const button = document.createElement("button");
   button.innerText = "✖️";
   button.addEventListener("click", deleteToDo);
@@ -32,8 +35,12 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newToDo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newToDo);
-  paintToDo(newToDo);
+  const newToDoObj = {
+    text: newToDo,
+    id: Date.now(),
+  };
+  toDos.push(newToDoObj);
+  paintToDo(newToDoObj);
   saveToDos();
 }
 
@@ -41,7 +48,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if (savedToDos) {
+if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
@@ -65,3 +72,19 @@ if (savedToDos) {
 
 // arrow function
 // parsedToDos.forEach((item) => console.log("this is the turn of", item));
+
+// parsedToDos.forEach(paintToDo);
+// forEach 함수는 paintToDo를 parsedToDos 배열의 요소마다 실행
+// forEach는 각각의 item을 줌
+
+//// Filter ////
+// 만약 array에서 뭔가 삭제할 때 실제로 array를 지우는 게 아닌 지우고 싶은 item을 제외하고 새 array를 만든다
+// = item을 지우는 게 아니라 item을 제외 (말 그대로 필터링!)
+
+// function sexyFilter() {}
+
+// [1, 2, 3, 4].filter(sexyFilter);
+
+// sexyFilter()
+
+// 새 array에서 object를 유지하고 싶다면 반드시 true를 리턴
