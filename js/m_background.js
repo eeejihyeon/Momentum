@@ -1,4 +1,5 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
+const images = ["img0.jpg", "img1.jpg", "img2.jpg"];
+const box = document.querySelector(".box2");
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
@@ -6,7 +7,7 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+box.prepend(bgImage);
 
 //// JS에서 생성한 요소를 HTML에 추가하기 ////
 // document.createElement("img"): Element 생성 -> <img>
