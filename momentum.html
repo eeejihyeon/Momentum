@@ -11,7 +11,7 @@
     <form id="login-form" class="hidden">
       <input
         required
-        maxlength="15"
+        maxlength="18"
         type="text"
         placeholder="What is your name?"
       />
@@ -29,7 +29,7 @@
           <span></span>
         </div>
 
-        <p id="greeting" class="hidden"></p>
+        <p id="greeting" class="hidden shp"></p>
       </div>
 
       <div class="box2">
@@ -37,20 +37,31 @@
         <!-- random img -->
         <div id="quote">
           <span></span>
-          <br />
-          <em><span></span></em>
+          <div class="sec">
+            <div class="line"></div>
+            <em><span></span></em>
+          </div>
         </div>
       </div>
 
       <div class="box3">
         <!-- to do list & link -->
-        <form id="todo-form">
-          <input type="text" placeholder="Write a To Do and press Enter" />
-        </form>
-        <ul id="todo-list"></ul>
+        <div class="todo">
+          <p class="shp">To Do List</p>
+          <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and press Enter" />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
 
-        <a href="http://www.google.com" class="link-btn"></a>
-        <a href="http://www.naver.com" class="link-btn"></a>
+        <div class="link">
+          <a href="http://www.google.com" class="link-btn" target="_blank"
+            >Google</a
+          >
+          <a href="http://www.naver.com" class="link-btn" target="_blank"
+            >Naver</a
+          >
+        </div>
       </div>
     </div>
 
