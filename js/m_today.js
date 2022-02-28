@@ -4,9 +4,16 @@ const today = document.querySelector("#date");
 function getClock() {
   const date = new Date();
   // date.getHours()는 Number 타입을 받기 때문에 String()안에 넣어서 number -> string 으로 변환 후 padStart() 실행
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}`;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  hours = String(date.getHours()).padStart(2, "0");
+  minutes = String(date.getMinutes()).padStart(2, "0");
+
+  clock.innerText = `${ampm} ${hours}:${minutes}`;
 }
 
 function getDate() {

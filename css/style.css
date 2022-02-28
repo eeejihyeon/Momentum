@@ -9,12 +9,19 @@ body {
   font-size: 14px;
 }
 
+h1,
+h2,
+h3,
+h4,
 ul,
 ol,
-li {
+li,
+p {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 a {
@@ -31,6 +38,12 @@ a {
 .hidden {
   display: none;
 }
+
+.fadein {
+  animation: fadein 2s;
+}
+
+/* Login form */
 
 /* Container */
 
@@ -62,13 +75,29 @@ a {
 }
 
 #clock {
-  font-size: 60px;
-  margin: 0;
+  font-size: 62px;
+  margin-bottom: 5px;
 }
 
 #date {
   font-size: 18px;
-  margin: 10px 0;
+  margin-right: 10px;
+}
+
+#weather {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#weather > span {
+  width: 47%;
+  height: 40px;
+  margin: 15px 0 0;
+  border: 1px solid #000;
+  border-radius: 100px;
+  line-height: 40px;
+  text-align: center;
 }
 
 /* Box2 */
@@ -199,4 +228,17 @@ img {
   border-radius: 100px;
   line-height: 40px;
   text-align: center;
+}
+
+.link-btn:hover {
+  color: white;
+  background: #000;
+  width: 47%;
+  height: 40px;
+  margin: 0;
+  border: 1px solid #000;
+  border-radius: 100px;
+  line-height: 40px;
+  text-align: center;
+  transition: 0.5s;
 }
