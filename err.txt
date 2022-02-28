@@ -1,0 +1,17 @@
+1.
+box2 - #quote - .sec
+- line과 author 사이즈가 유동적이어야 하는데 line 사이즈 고정, author 줄바꿈 되는 현상
+: line에 flex-grow: 1; 을 줘서 여백 사이즈를 늘려서 채우는 느낌으로 해결
+
+2.
+box3 - #todo-form - input
+- placeholder CSS 변경
+: #todo-form input::placeholder {}로 선택해서 CSS 변경
+
+3.
+box3 - #todo-list - button
+- delete 아이콘을 in CSS로 변경 (js로 생성한 element에 classname 주기)
+- 아이콘 line-height가 아래쪽으로 내려옴
+: .js에 button.innerText = "" 부분을 button.className = ""으로 변경
+
+line-height나 (flex)align-items 적용이 안 돼서 button에 padding-bottom 값 주는 것으로 해결

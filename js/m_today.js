@@ -1,16 +1,28 @@
 const clock = document.querySelector("#clock");
+const today = document.querySelector("#date");
 
 function getClock() {
   const date = new Date();
   // date.getHours()는 Number 타입을 받기 때문에 String()안에 넣어서 number -> string 으로 변환 후 padStart() 실행
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  clock.innerText = `${hours}:${minutes}`;
+}
+
+function getDate() {
+  const date = new Date();
+  const options = {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  };
+
+  today.innerText = new Intl.DateTimeFormat("en-US", options).format(date);
 }
 
 // getClock을 이미 호출했기 때문에 새로고침 해도 00:00:00으로 1초 동안 갱신하지 않고 화면에 바로 호출 및 실행
 getClock();
+getDate();
 setInterval(getClock, 1000);
 
 //// setInterval & setTimeout ////

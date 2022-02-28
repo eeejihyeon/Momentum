@@ -23,6 +23,11 @@ a {
   cursor: pointer;
 }
 
+.bld {
+  font-weight: bold;
+  font-style: italic;
+}
+
 .hidden {
   display: none;
 }
@@ -54,6 +59,16 @@ a {
   justify-content: space-between;
   flex-direction: column;
   flex-basis: 25%;
+}
+
+#clock {
+  font-size: 60px;
+  margin: 0;
+}
+
+#date {
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 /* Box2 */
