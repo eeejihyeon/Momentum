@@ -1,4 +1,4 @@
-const images = ["img0.jpg", "img1.jpg", "img2.jpg"];
+const images = ["img0.jpg", "img1.jpg", "img2.jpg", "img3.jpg"];
 const box = document.querySelector(".box2");
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
