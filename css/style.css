@@ -24,6 +24,14 @@ p {
   margin-block-end: 0;
 }
 
+input {
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -40,10 +48,122 @@ a {
 }
 
 .fadein {
-  animation: fadein 2s;
+  animation: fadein 1.5s;
+}
+
+.fadeout {
+  animation: fadeout 1.5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Login form */
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+  background: white;
+  box-sizing: border-box;
+}
+
+.login-form input:first-child {
+  width: 200px;
+  height: 35px;
+  padding: 0 10px;
+  margin-right: 10px;
+
+  border-bottom: 1px solid #000;
+}
+
+.login-form input:first-child::placeholder {
+  font-style: italic;
+  color: #bbb;
+}
+
+.login-form input:last-child {
+  width: 80px;
+  height: 40px;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 100px;
+}
+
+.login-form input:last-child:hover {
+  width: 80px;
+  height: 40px;
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+}
 
 /* Container */
 
@@ -159,7 +279,7 @@ img {
 }
 
 #todo-form input::placeholder {
-  color: rgb(170, 170, 170);
+  color: #bbb;
   font-style: italic;
 }
 #todo-list {
