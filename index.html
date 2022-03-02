@@ -2,43 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:title" content="Momentum" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/og_img.png" />
+    <meta property="og:description" content="Lee Jihyeon's Portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Momentum App</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum</title>
   </head>
 
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
+    <form id="login-form" class="login-form fadein hidden">
+      <div class="login">
+        <input
+          required
+          maxlength="18"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="Log In" />
+      </div>
     </form>
-    <h2 id="clock">00:00</h2>
-    <p id="greeting" class="hidden"></p>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and press Enter" />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <br />
-      <em><span></span></em>
+
+    <div class="container hidden">
+      <div class="box1">
+        <!-- today's & greeting -->
+        <div class="todays">
+          <h2 id="clock">00:00</h2>
+          <div class="sec">
+            <p id="date"></p>
+            <div class="line"></div>
+          </div>
+          <div id="weather">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="white"></div>
+        <p id="greeting" class="hidden shp"></p>
+      </div>
+
+      <div class="box2">
+        <!-- random -->
+        <!-- random img -->
+        <div id="quote">
+          <span></span>
+          <div class="sec">
+            <div class="line"></div>
+            <em><span></span></em>
+          </div>
+        </div>
+      </div>
+
+      <div class="box3">
+        <!-- to do list & link -->
+        <div class="todo">
+          <p class="shp">To Do List</p>
+          <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and press Enter" />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+
+        <div class="link">
+          <a href="http://www.google.com" class="link-btn" target="_blank"
+            >Google</a
+          >
+          <a href="http://www.naver.com" class="link-btn" target="_blank"
+            >Naver</a
+          >
+        </div>
+      </div>
     </div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
-
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/m_greeting.js"></script>
+    <script src="js/m_today.js"></script>
+    <script src="js/m_quotes.js"></script>
+    <script src="js/m_background.js"></script>
+    <script src="js/m_todo.js"></script>
+    <script src="js/m_weather.js"></script>
   </body>
 </html>
