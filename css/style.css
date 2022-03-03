@@ -237,10 +237,11 @@ a {
 
 img {
   width: 100%;
+  margin-bottom: 0.8rem;
 }
 
 #quote {
-  height: 55px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
